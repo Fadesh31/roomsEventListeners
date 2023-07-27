@@ -40,6 +40,26 @@ function createAndDisplayRoom(name, length, width, height, windows, doorSize, do
   return room;
 }
 
+/**
+ * Add a navigation section to the DOM
+ */
+const navContent = `
+  <li><a href="#">Home</a></li>
+  <li><a href="#">About</a></li>
+  <li><a href="#">Backpacks</a></li>
+  <li><a href="#">Other things</a></li>
+  <li><a href="#">Contact</a></li>
+`;
+
+const mainNav = document.createElement("nav");
+mainNav.classList.add("main-navigation");
+const navList = document.createElement("ul");
+navList.innerHTML = navContent;
+mainNav.append(navList);
+
+document.querySelector(".siteheader").append(mainNav);
+
+
 function changeWallColor(room) {
   // Generate a random color for the wall
   const randomColor = generateRandomColor();

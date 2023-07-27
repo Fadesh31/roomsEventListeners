@@ -1,4 +1,4 @@
-import LargeRoom from "./roomsEventListners.js";
+import LargeRoom from "./roomsEventListeners.js";
 
 function createAndDisplayRoom(name, length, width, height, windows, doorSize, doorType, floorType, doorClosed, wallColor) {
   const room = new LargeRoom(name, length, width, height, windows, doorSize, doorType, floorType, doorClosed, wallColor);
